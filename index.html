@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Portfolio Site</title>
+    <link rel="stylesheet" href="output.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="followMenu">
+      <ul>
+        <a href="#section1"
+          ><li id="li1"><p>START</p></li></a
+        >
+        <a href="#section2"
+          ><li id="li2"><p>Examples</p></li></a
+        >
+        <a href="#section3"
+          ><li id="li3"><p>Skills</p></li></a
+        >
+        <a href="#section4"
+          ><li id="li4"><p>Contact</p></li></a
+        >
+      </ul>
+    </div>
+    <section id="section1" class="section introduction">
+      <div id="textArea">
+        <h1 id="h1">Søren Rembøll</h1>
+        <h2 id="h2">A Multi-media Developer</h2>
+      </div>
+      <div id="startButtonArea">
+        <div id="startButton">
+          <p>Let's Start</p>
+        </div>
+      </div>
+
+      <div class="expand">
+        <div id="expandContent">
+          <div class="content">
+            <h2 id="contentHeader">Hello there!</h2>
+            <p id="p1">My name is Søren Rembøll, I'm a Multi-media developer, with focus on functionality.
+            </p>
+            <p id="p2">I'm a hardworking student with a flair for knowledge searching and learning somthing new everyday. 
+            </p>
+            <hr>
+            <h3 id="listHeader"> A bit about me:</h3>
+            <ul>
+              <li>Extrovert</li><span></span>
+              <li>Flexible with work</li><span></span>
+              <li>Likes to learn new frameworks</li><span></span>
+              <li>Love dogs</li><span></span>
+              <li>Can't get enough music in my life</li><span></span>
+              <li>Generally happy guy</li><span></span>
+              
+            </ul>
+           
+          </div>
+          <div class="content">
+            <img src="images/mig.jpg" alt="Et billede af Mig" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="firstSection" id="section2">
+      <div class="firstPara">
+        <h3>Section: Projects</h3>
+        <p>
+          Here's a set of 3 projects i chose to highlight for this portfolio
+        </p>
+      </div>
+
+      <div class="bgimg-2">
+        <div class="demo" id="demo1">
+          <div class="workCard">
+            <img src="images/placeholder.jpg" alt="" />
+            <div class="textBlock">
+              <p>
+                Some text for a project
+              </p>
+            </div>
+          </div>
+          <div class="workCard">
+            <img src="images/placeholder.jpg" alt="" />
+            <div class="textBlock">
+              <p>
+                Some text for a project
+              </p>
+            </div>
+          </div>
+          <div class="workCard">
+            <img src="images/placeholder.jpg" alt="" />
+            <div class="textBlock">
+              <p>
+                Some text for a project
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="sectionFooter">
+          <p>
+            Editors footnotes:
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="firstSection" id="section3">
+      <div class="firstPara">
+        <h3>Section: Skills</h3>
+        <p>
+          Here's some graphic visualization of my skills relative to my study, and future career
+        </p>
+      </div>
+
+      <div class="bgimg-1">
+        <div class="demo" id="demo2">
+          <div class="graphContainer">
+            <div class="graph" id="graph1">
+              <div class="text">
+                <p>
+                  Javascript
+                </p>
+              </div>
+              <div class="block" id="block1">
+                <p>Excellent</p>
+              </div>
+            </div>
+            <div class="graph" id="graph2">
+                <div class="text">
+                    <p>
+                      Data Storing
+                    </p>
+                  </div>
+                  <div class="block" id="block2">
+                    <p>Decent</p>
+                  </div>
+                </div>
+            
+            <div class="graph" id="graph3">
+                <div class="text">
+                    <p>
+                      Information architecture
+                    </p>
+                  </div>
+                  <div class="block" id="block3">
+                    <p>GOOD</p>
+                  </div>
+                </div>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="sectionFooter">
+          <p>
+            Editors Notes:
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="firstSection" id="section4">
+      <div class="firstPara">
+        <h3>Section: Contact</h3>
+        <p>
+          Write to me! I usually get back within a few work days, so let's make something great!
+        </p>
+      </div>
+
+      <div class="bgimg-2">
+        <div class="demo" id="demo3">
+          <div id="myForm">
+          <h2>Contact me!</h2>
+         
+          <form>
+            <label>
+               <p>Your Name: </p> <input type="text" placeholder="Your name here.." required id="formName"><span></span>
+            </label>
+            <label>
+           <p> Email Adress:</p>  <input type="email" required placeholder="example@example.com" id="formEmail"><span></span>
+            </label>
+            <label>
+              <p> Telephone Number: <span style="font-style:italic">(optional)</span></p> 
+              <input type="text" pattern="[ 0-9]{8}" placeholder="12345678" id="formNumber">
+            </label>
+          </form>
+          <p> <span style="font-style:italic"> Your personal information is only saved for contacting uses, and will not be fowarded</span></p>
+          <div id="cooporate">
+            <p>Let's get to work!</p>
+          </div>
+        </div>
+        <div class="thanks">
+          <h2>Thank you for contacting me!</h2>
+          <p>I will write back as soon as possible</p>
+        </div>
+        <div class="links">
+          <h2>Follow me here!</h2>
+          <div class="linkContainer">
+            <a href="https://github.com/soer145a">
+            <img src="images/github.svg" alt=""></a>
+            <a href="https://www.linkedin.com/in/s%C3%B8ren-remb%C3%B8ll-aa7823182/">
+            <img src="images/linkedin.jpg" alt=""></a>
+           <div id="resume">
+              <p>And My Resume:</p>
+            <a href="https://docs.google.com/document/d/1cnYnIHhdjUASe3EEqJ-XP66xZWKcwcOpWzjIFOwYdkY/edit?usp=sharing">
+            <img src="images/resume.png" alt=""></a> 
+            
+          </div>
+            
+          </div>
+          
+            
+
+        </div>
+      </div>
+    </div>
+
+      <div class="footer">
+        <div class="sectionFooter">
+          <p>
+            Editors Notes:
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="index.js"></script>
+</html>

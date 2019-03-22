@@ -1,0 +1,470 @@
+body {
+  @extend reset;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+reset {
+  margin: 0;
+  padding: 0;
+}
+$h1Font: "Roboto Slab", cursive;
+$displayFont: "Roboto", sans-serif;
+frame {
+  width: 100vw;
+  height: 100vh;
+  @extend reset;
+}
+.section {
+  @extend frame;
+}
+
+#section1 {
+  background-color: black;
+  z-index: 1;
+  h1 {
+    @extend reset;
+    color: white;
+    font-family: $h1Font;
+    font-size: 4.5em;
+    letter-spacing: 3px;
+    opacity: 0;
+    margin-top: 9vw;
+    font-weight: bold;
+  }
+  h2 {
+    @extend reset;
+    color: white;
+    font-family: $displayFont;
+    font-size: 3em;
+    opacity: 0;
+  }
+  #textArea {
+    width: 100vw;
+    position: absolute;
+    text-align: center;
+    margin-top: 10vw;
+  }
+  #startButtonArea {
+    @extend reset;
+    opacity: 0;
+
+    width: 100vw;
+
+    position: absolute;
+    top: 60vh;
+
+    #startButton {
+      @extend reset;
+      background-color: #191919;
+      width: 20vw;
+      height: 10vh;
+      border-radius: 10vw;
+      margin: auto;
+      transition: 0.5s;
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      p {
+        @extend reset;
+        transform: translate(5.5vw, 1.3vw);
+        font-size: 2em;
+        font-family: $displayFont;
+        color: White;
+        font-weight: bold;
+        pointer-events: none;
+      }
+    }
+  }
+  .expand {
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background-image: url("images/Coding.jpg");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    transform: scale(0);
+    #expandContent {
+      width: 90vw;
+      height: 90vh;
+      margin-left: 5vw;
+      margin-top: 5vh;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-gap: 4vw;
+      background-color: rgba($color: white, $alpha: 0.66);
+
+      .content {
+        font-family: $displayFont;
+        font-size: 2em;
+        margin: 1vw;
+
+        #contentHeader {
+          font-family: $h1Font;
+          color: black;
+          font-size: 2em;
+          opacity: 1;
+        }
+        #p1 {
+          font-family: $displayFont;
+          font-size: 1.1em;
+        }
+        #listHeader {
+          font-family: $h1Font;
+          font-size: 1.6em;
+        }
+        ul {
+          list-style: circle;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.bgimg-1,
+.bgimg-2,
+.bgimg-3 {
+  position: relative;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgimg-2 {
+  background-image: url("images/fronEnd.png");
+  height: 62.9vh;
+}
+.bgimg-1 {
+  background-image: url("images/Coding.jpg");
+  height: 62.9vh;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1 {
+    background-attachment: scroll;
+  }
+}
+
+.firstPara {
+  color: #777;
+  background-color: white;
+  text-align: center;
+  padding: 50px 80px;
+  text-align: justify;
+  h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 20px "Lato", sans-serif;
+    color: #111;
+  }
+  h3 {
+    text-align: center;
+  }
+  p {
+    font-family: $displayFont;
+    text-align: center;
+  }
+}
+.aSpan {
+  background-color: transparent;
+  font-size: 25px;
+  color: #f7f7f7;
+}
+.firstSection {
+  height: 100vh;
+}
+.sectionFooter {
+  color: #ddd;
+  background-color: #282e34;
+  text-align: center;
+  padding: 50px 80px;
+  text-align: justify;
+}
+.footer {
+  position: relative;
+}
+#followMenu {
+  position: fixed;
+  height: 42vh;
+  width: 5vw;
+  right: 1vw;
+  top: 50%;
+  opacity: 0;
+  z-index: 10;
+  background-color: black;
+  border-radius: 5vw;
+  transition: 0.5s;
+  ul {
+    list-style: none;
+    @extend reset;
+    margin-top: 0.7vw;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 1vw;
+    text-decoration: none;
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    #li1 {
+      background-color: lightgreen;
+    }
+    #li2 {
+      background-color: lightblue;
+    }
+    #li3 {
+      background-color: teal;
+    }
+    #li4 {
+      background-color: lightblue;
+    }
+    li {
+      background-color: white;
+      width: 4vw;
+      height: 4vw;
+      @extend reset;
+      text-align: center;
+      margin: auto;
+      border-radius: 5vw;
+      p {
+        @extend reset;
+        transform: translateY(1.5vw);
+        font-family: $displayFont;
+      }
+    }
+  }
+}
+.demo {
+  width: 90vw;
+  height: 55vh;
+  background-color: black;
+
+  position: relative;
+  left: 5vw;
+  top: 2vw;
+  opacity: 0;
+}
+#demo1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  .workCard {
+    background-color: rgba($color: lightblue, $alpha: 1.1);
+    margin: 1vw;
+    &:hover {
+      transform: scale(1.05);
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    img {
+      width: 15vw;
+      height: 15vw;
+      margin: 1vw 1vw 4vw 6vw;
+    }
+    .textBlock {
+      width: 100%;
+      font-family: $displayFont;
+      text-align: center;
+      font-size: 2em;
+      p {
+        @extend reset;
+      }
+    }
+  }
+}
+#demo2 {
+  .graphContainer {
+    background-color: white;
+    margin: 1vw;
+    height: 50vh;
+    transform: translateY(1.1vw);
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    .graph {
+      margin: 1vw;
+      background-color: teal;
+      #block1 {
+        background-color: lightgreen;
+      }
+      #block2 {
+        background-color: palevioletred;
+      }
+      #block3 {
+        background-color: aqua;
+      }
+
+      .block {
+        height: 2vw;
+        width: 10vw;
+        margin: 1vw;
+        opacity: 0;
+
+        p {
+          @extend reset;
+          font-family: $displayFont;
+          transform: translate(1vw, 0.3vw);
+          font-size: 1.3em;
+          font-weight: bold;
+          letter-spacing: 2px;
+        }
+      }
+      .text {
+        p {
+          @extend reset;
+          font-family: $h1Font;
+          font-size: 1.6em;
+          margin: 10px;
+        }
+      }
+    }
+  }
+}
+#demo3 {
+  background-color: lightblue;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  .links {
+    h2 {
+      font-family: $h1Font;
+      font-size: 2em;
+      margin-left: 2vw;
+    }
+    .linkContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      #resume {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        p {
+          @extend reset;
+          font-family: $displayFont;
+          margin-top: 4vw;
+          margin-left: 2vw;
+          font-size: 1.4em;
+        }
+      }
+      a {
+        img {
+          width: 10vw;
+          height: 10vw;
+          border-radius: 2vw;
+          margin: auto;
+        }
+      }
+    }
+  }
+  .thanks {
+    display: none;
+    h2 {
+      font-family: $h1Font;
+      font-size: 2em;
+      margin: 1vw;
+    }
+    p {
+      @extend reset;
+      font-family: $displayFont;
+      font-size: 1.5em;
+      margin: 1vw;
+    }
+  }
+  #myForm {
+    p {
+      @extend reset;
+      font-family: $displayFont;
+      margin-left: 2vw;
+    }
+    h2 {
+      font-family: $h1Font;
+      font-size: 2em;
+      margin-left: 2vw;
+    }
+    form {
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-gap: 0.5vw;
+
+      input:not([type="submit"]) {
+        background: blue;
+      }
+      input:invalid {
+        background: pink;
+      }
+      input:valid {
+        background: lightgreen;
+      }
+      input:focus {
+        outline: none;
+        border-bottom: solid 2px hotpink;
+      }
+      input {
+        border: none;
+        background: white;
+        border-bottom: solid 1px black;
+        width: 11vw;
+        margin-bottom: 2vw;
+      }
+      label {
+        font-family: $displayFont;
+        margin: 1vw;
+        font-size: 1.4em;
+        background-color: teal;
+        border: solid black 2px;
+        transform: scale(1.3) translateX(2vw);
+
+        color: white;
+        height: 3.1vw;
+        width: 20vw;
+        p {
+          @extend reset;
+          font-family: $displayFont;
+          font-weight: bold;
+          letter-spacing: 2px;
+          margin: 2px;
+        }
+      }
+      input:placeholder-shown {
+        background: white;
+      }
+      input:not(:placeholder-shown):invalid + span:after {
+        content: "✖";
+        color: black;
+      }
+
+      input:valid + span:after {
+        content: "✓";
+        color: black;
+      }
+    }
+    #cooporate {
+      background-color: lightgray;
+      width: 10vw;
+      height: 2vw;
+      margin-left: 1.2vw;
+      margin-top: 1.2vw;
+      border-radius: 5vw;
+      border: solid black 1px;
+      z-index: 2;
+      p {
+        font-family: $displayFont;
+        text-align: center;
+        margin-top: 0.5vw;
+        @extend reset;
+      }
+      &:hover {
+        cursor: pointer;
+        transition: 0.3s;
+        transform: scale(1.05);
+      }
+    }
+  }
+}
